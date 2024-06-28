@@ -1,5 +1,13 @@
 package jp.ac.it_college.std.s23021.message.board.application.service
 
+//import jp.ac.it_college.std.s23021.message.board.domain.model.Thread
+//import jp.ac.it_college.std.s23021.message.board.domain.repository.ThreadRepository
+//import kotlinx.datetime.Clock
+//import org.springframework.stereotype.Service
+//import kotlinx.datetime.LocalDateTime
+//import kotlinx.datetime.TimeZone
+//import kotlinx.datetime.toLocalDateTime
+//
 //class ThreadService(
 //    private val threadRepository: ThreadRepository
 //) {

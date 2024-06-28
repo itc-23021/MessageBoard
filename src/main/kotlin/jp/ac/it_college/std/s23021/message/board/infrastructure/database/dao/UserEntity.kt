@@ -1,5 +1,11 @@
 package jp.ac.it_college.std.s23021.message.board.infrastructure.database.dao
 
+import jp.ac.it_college.std.s23021.message.board.domain.model.User
+import org.jetbrains.exposed.dao.LongEntity
+import org.jetbrains.exposed.dao.LongEntityClass
+import org.jetbrains.exposed.dao.id.EntityID
+import org.jetbrains.exposed.dao.id.IdTable
+
 class UserEntity(id: EntityID<Long>) : LongEntity(id) {
     companion object : LongEntityClass<UserEntity>(UsersTable)
 

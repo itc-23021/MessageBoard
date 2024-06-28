@@ -1,8 +1,13 @@
 package jp.ac.it_college.std.s23021.message.board.domain.model
 
-data class User(
+import kotlinx.datetime.LocalDateTime
+
+data class ThreadWithUser(
     val id: Long,
-    var viewName: String,
-    val email: String,
-    var password: String
+    val title: String,
+    val userId: Long,
+    val userName: String,
+    val createdAt: LocalDateTime,
+    val updatedAt: LocalDateTime,
+    val deleted: Boolean
 )

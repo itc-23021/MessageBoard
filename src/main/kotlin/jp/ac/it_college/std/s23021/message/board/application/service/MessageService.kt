@@ -1,5 +1,14 @@
 package jp.ac.it_college.std.s23021.message.board.application.service
 
+//import jp.ac.it_college.std.s23021.message.board.domain.model.Message
+//import jp.ac.it_college.std.s23021.message.board.domain.repository.MessageRepository
+//import jp.ac.it_college.std.s23021.message.board.domain.repository.ThreadRepository
+//import jp.ac.it_college.std.s23021.message.board.domain.repository.UserRepository
+//import kotlinx.datetime.Clock
+//import kotlinx.datetime.TimeZone
+//import kotlinx.datetime.toLocalDateTime
+//import org.springframework.stereotype.Service
+//
 //@Service
 //class MessageService(
 //    private val messageRepository: MessageRepository,

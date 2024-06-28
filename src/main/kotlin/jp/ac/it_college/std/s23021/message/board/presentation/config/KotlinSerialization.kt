@@ -1,28 +1,14 @@
 package jp.ac.it_college.std.s23021.message.board.presentation.config
 
-@Configuration
-@EnableWebSecurity
-class SecurityConfig {
-    @Bean
-    @Order(1)
-    fun configure(http: HttpSecurity): SecurityFilterChain {
-        http {
-            csrf { disable() }
-            authorizeHttpRequests {
-                authorize("/users/register", "/login", authenticated)
-                authorize(anyRequest, permitAll)
-            }
-            formLogin {
-                loginPage = "/login"
-                permitAll()
-            }
-            httpBasic {}
-        }
-        return http.build()
-    }
+import org.springframework.context.annotation.Configuration
+import org.springframework.http.converter.HttpMessageConverter
+import org.springframework.http.converter.json.KotlinSerializationJsonHttpMessageConverter
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
-    @Bean
-    fun passwordEncoder(): PasswordEncoder {
-        return BCryptPasswordEncoder()
+@Configuration
+class KotlinSerialization : WebMvcConfigurer {
+
+    override fun configureMessageConverters(converters: MutableList<HttpMessageConverter<*>>) {
+        converters.add(KotlinSerializationJsonHttpMessageConverter())
     }
 }

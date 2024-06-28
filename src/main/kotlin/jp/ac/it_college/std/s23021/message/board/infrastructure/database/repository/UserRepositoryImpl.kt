@@ -1,4 +1,13 @@
 package jp.ac.it_college.std.s23021.message.board.infrastructure.database.repository
+import jp.ac.it_college.std.s23021.message.board.domain.repository.UserRepository
+import jp.ac.it_college.std.s23021.message.board.infrastructure.database.dao.UserEntity
+import jp.ac.it_college.std.s23021.message.board.infrastructure.database.dao.UsersTable
+import org.jetbrains.exposed.sql.transactions.transaction
+import jp.ac.it_college.std.s23021.message.board.domain.model.User
+import org.jetbrains.exposed.sql.ResultRow
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
+import org.jetbrains.exposed.sql.select
+import org.springframework.stereotype.Repository
 
 @Repository
 class UserRepositoryImpl : UserRepository {

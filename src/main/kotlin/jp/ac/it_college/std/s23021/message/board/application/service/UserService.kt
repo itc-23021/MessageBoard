@@ -1,11 +1,12 @@
 package jp.ac.it_college.std.s23021.message.board.application.service
 
-import jp.ac.it_college.std.s23021.message.board.domain.User
+import jp.ac.it_college.std.s23021.message.board.domain.model.User
 import jp.ac.it_college.std.s23021.message.board.domain.repository.UserRepository
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
+@Service
 class UserService(
     private val userRepository: UserRepository,
     private val passwordEncoder: PasswordEncoder
